@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'Hello, ' + ${name} + '!'" />
+    <fieldset width="100%" height="100%">
+    <legend>Vos données personnelles</legend>
+	    <form name="form" method="POST" action="http://localhost:8088/test"
+	     modelAttribute="/greeting">
+	    	<label for>Nom</label>
+				<input type="text" name="nom" placeholder="votre nom"><br>
+			
+			<label for>Prénom</label>
+				<input type="text" name="prenom" placeholder="votre Prénom"><br>
+				
+	    	<label for>Annee de naissance</label>
+				<input type="date" name="annee" placeholder="votre annee"><br>
+				
+			<label for>Genre</label>
+				<select name="Genre">
+					<option value="masculin">Masculin</option>
+					<option value="feminin">Feminin</option>
+				</select><br>
+						
+			<input type="submit" value="submit">
+	    </form> 
+	 </fieldset>
+</body>
+</html>
